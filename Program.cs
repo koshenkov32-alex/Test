@@ -103,9 +103,11 @@ namespace ConsoleApp2
                                     sw.Write(" ,Value = ");
                                     if (text[i + i2] == '"')
                                     {
+                                        flag3++;
                                         for (int j = i + i2 + 1; text[j] != '"'; j++)
                                         {
                                             sw.Write(text[j]);
+                                            i = j;
                                         }
                                     }
                                     Console.WriteLine("");
