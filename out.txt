@@ -17,7 +17,7 @@
 (Id node =17 ,Id higher node = 16 ,Name = x  ,Value = 1)
 (Id node =18 ,Id higher node = 16 ,Name = y  ,Value = 1)
 (Id node =19 ,Id higher node = 16 ,Name = z  ,Value = 1)
-(Id node =20 ,Id higher node = 3 ,Name = color  ,Value = )
+(Id node =20 ,Id higher node = 1 ,Name = color  ,Value = )
 (Id node =21 ,Id higher node = 20 ,Name = r  ,Value = 0xFF)
 (Id node =22 ,Id higher node = 20 ,Name = g  ,Value = 0x00)
 (Id node =23 ,Id higher node = 20 ,Name = b  ,Value = 0x80)
