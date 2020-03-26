@@ -48,21 +48,21 @@ namespace ConsoleApp2
                         {
                             asdqwe = flag3 % 2;
                         }
-                        if ((flag1 != 0 && i == text.Length) || flag == 1 || asdqwe!=0)
+                        if ((flag1 != 0 || flag == 1 || asdqwe != 0) && i == text.Length)
                         {
                             flag2 = 1;
                             break;
                         }
 
 
-                        
+
                         if ((Char.IsLetter(text[i]) || text[i] == '_' || Char.IsDigit(text[i])) && i != 0)
                         {
-                            if (!Char.IsLetter(text[i - 1]) && text[i-1] != '_' && !Char.IsDigit(text[i-1]))
+                            if (!Char.IsLetter(text[i - 1]) && text[i - 1] != '_' && !Char.IsDigit(text[i - 1]))
                                 j1 = i;
                         }
 
-                                switch (text[i])
+                        switch (text[i])
                         {
                             case '=':
                                 int i2 = 1;
@@ -73,7 +73,7 @@ namespace ConsoleApp2
                                     if (text[i1] == '{' || text[i1] == '"')
                                         break;
                                 }
-                                if (text[i + i2] == '{' || text[i + i2] == '"' )
+                                if (text[i + i2] == '{' || text[i + i2] == '"')
                                 {
                                     if (Char.IsDigit(text[j1]))
                                     {
@@ -81,32 +81,31 @@ namespace ConsoleApp2
                                         break;
                                     }
 
-                                    for (int i12=0; i12<= idF; i12++)
+                                    for (int i12 = 0; i12 <= idF; i12++)
                                         Console.Write("   ");
 
-                                    
+
                                     sw.Write("(");
                                     sw.Write("Id node ={0} ", id);
                                     sw.Write(",Id higher node = {0} ", idR);
                                     sw.Write(",Name = ");
 
-                                    
 
-                                        for (int j = j1; j < i; j++)
-                                        {
-                                             sw.Write(text[j]);
-                                             Console.Write(text[j]);
-                                        }
+
+                                    for (int j = j1; j < i; j++)
+                                    {
+                                        sw.Write(text[j]);
+                                        Console.Write(text[j]);
+                                    }
 
 
                                     id++;
                                     sw.Write(" ,Value = ");
                                     if (text[i + i2] == '"')
                                     {
-                                        for (int j = i + i2+1; text[j] != '"'; j++)
+                                        for (int j = i + i2 + 1; text[j] != '"'; j++)
                                         {
                                             sw.Write(text[j]);
-                                            i = j;
                                         }
                                     }
                                     Console.WriteLine("");
@@ -129,8 +128,8 @@ namespace ConsoleApp2
                                 break;
                         }
                     }
-                    
-                    
+
+
                 }
                 if (flag2 == 1)
                 {
